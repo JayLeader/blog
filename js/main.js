@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 			$("#status").fadeOut(); 
 
 			//fade out the white DIV that covers the website
-			$("#preloader").delay(400).fadeOut("slow");
+			$("#preloader").delay(200).fadeOut("slow");
 		});	
 	}; 
 
@@ -72,9 +72,16 @@ jQuery(document).ready(function($){
 	/* Random bg-img for header*/
 	var Annie_Random = function() {
 		//generate a random img that pre_name 'from 0 to 110'
-		var random_bg = Math.floor(Math.random()*7 + 1);
+		//var random_bg = Math.floor(Math.random()*7 + 1);
 		//var bg = 'url(/img/random/' + random_bg + '.jpg)';
+		let path = window.location.href;
 		var bg = 'url(/blog/img/random/' + '7' + '.png)';
+		if(path.includes('change')) bg = 'url(/blog/img/' + 'change' + '.png)';
+		if(path.includes('meifengla')) bg = 'url(/blog/img/' + 'meifengla' + '.png)';
+		if(path.includes('project')) bg = 'url(/blog/img/' + 'project' + '.png)';
+		if(path.includes('device')) bg = 'url(/blog/img/' + 'wear' + '.png)';
+		if(path.includes('GNetlinkApp')) bg = 'url(/blog/img/' + 'G-netlink' + '.png)';
+		if(path.includes('intelVoice')) bg = 'url(/blog/img/' + 'intel-voice' + '.png)';
 		$("header").css("background-image", bg);
 	};
 
