@@ -160,9 +160,9 @@ footer span {
 
 /*文章、页面居中布局*/
 .am-u-md-8 {
-	width: 66.66666667%;
-	margin-left: 15%;
-	margin-right: 15%;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 @media(max-width:512px) {
